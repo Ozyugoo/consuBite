@@ -34,7 +34,7 @@ function Navbar() {
           </div>
         </div>
         <ul
-          className={`md:flex md:w-4/6 space-x-6 lg:text-base font-semibold md:p-0 cursor-pointer md:text-black p-10 absolute lg:relative right-0 items-center md:relatve md:bg-inherit sm:z-50 top-0 w-1/2 lg:w-3/5 lg:flex ${
+          className={`md:flex md:w-4/6 md:px-6 lg:space-x-8 md:space-x-5 lg:text-base font-semibold md:p-0 cursor-pointer md:text-black p-10 absolute lg:relative right-0 items-center md:relatve md:bg-inherit sm:z-50 top-0 w-1/2 lg:flex ${
             isOpen ? "block" : "hidden"
           }`}
         >
