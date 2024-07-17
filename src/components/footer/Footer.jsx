@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-black w-full h-auto px-24 py-20 text-white flex flex-row place-content-between items-start font-poppins max-md:flex-col max-md:gap-8 max-md:px-6 max-md:py-12">
+      <footer className="bg-black w-full h-auto px-24 py-20 text-white flex flex-row flex-wrap place-content-between items-start font-poppins max-md:flex-col max-md:gap-8 max-md:px-6 max-md:py-12">
         {/* Consubite logo, tagline and social media links */}
         <div className="w-72 flex flex-col gap-y-8 max-md:w-fit">
           <div className="w-fit flex flex-col gap-y-4">
@@ -25,7 +25,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="w-2/3 flex flex-row place-content-between items-start pt-6 max-md:flex-col max-md:gap-6 max-md:w-full">
+        <div className="w-2/3 flex flex-row flex-wrap place-content-between items-start pt-6 max-md:flex-col max-md:gap-6 max-md:w-full">
           {/* Opening hours section */}
           <div className="flex flex-col gap-4">
             <p className="text-lg font-semibold">Opening Hours</p>
