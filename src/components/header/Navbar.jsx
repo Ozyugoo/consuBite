@@ -89,7 +89,7 @@ function Navbar() {
             alt="Pot Icon"
             className="absolute left-0 lg:relative"
           />
-          <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-li focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
+          <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
             Sign Up
           </Button>
           <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
