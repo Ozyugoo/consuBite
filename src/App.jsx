@@ -1,11 +1,13 @@
-import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './component/header/Header'
 
 function App() {
   return (
-    <>
-      <Footer />
-    </>
-  );
+    <Router>
+      <Header/>
+     <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
