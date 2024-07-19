@@ -34,7 +34,7 @@ function Navbar() {
           </div>
         </div>
         <ul
-          className={`md:flex md:w-4/6 md:px-6 lg:space-x-8 md:space-x-5 lg:text-base font-semibold md:p-0 cursor-pointer md:text-black p-10 absolute lg:relative right-0 items-center md:relatve md:bg-inherit sm:z-50 top-0 w-1/2 lg:flex ${
+          className={`md:flex md:w-4/6 md:px-6 lg:space-x-6 md:space-x-5 xl:text-base justify-center text-white font-semibold md:p-0 cursor-pointer bg-black md:text-black p-10 absolute lg:relative right-0 items-center md:relatve md:bg-inherit sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -89,7 +89,7 @@ function Navbar() {
             alt="Pot Icon"
             className="pl-3 absolute left-0 lg:relative"
           />
-          <Button className="hidden lg:flex bg-white border border-red-500 hover:bg-red-500 text-red-500 hover:text-white focus:bg-red-500 focus:text-white active:bg-red-500 active:text-white py-2 px-6">
+          <Button className="hidden lg:flex bg-white border border-red-500 hover:bg-red-500 text-red-500 hover:text-white focus:bg-red-500 focus:text-white active:bg-red-500 active:text-white py-2 px-5">
             Sign Up
           </Button>
           <Button className="hidden lg:flex bg-white border border-red-500 hover:bg-red-500 text-red-500 hover:text-white focus:bg-red-500 focus:text-white active:bg-red-500 active:text-white py-2 px-5">
