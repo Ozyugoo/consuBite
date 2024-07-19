@@ -1,5 +1,5 @@
 
-import whatWeServeImage from '../assets/images/whatWeServe.png'
+import whatWeServeImage from '../../assets/images/whatWeServe.png'
 
 function WhatWeServe() {
     return (
