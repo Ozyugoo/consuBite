@@ -34,7 +34,7 @@ function Navbar() {
           </div>
         </div>
         <ul
-          className={`md:flex md:w-4/6 md:px-6 lg:space-x-6 md:space-x-5 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer sm:bg-custom-black md:text-custom-black md:bg-custom-light p-10 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
+          className={`md:flex md:w-4/6 md:px-6 lg:space-x-5 md:space-x-5 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer sm:bg-custom-black md:text-custom-black md:bg-custom-light p-10 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -83,11 +83,11 @@ function Navbar() {
             </Button>
           </li>
         </ul>
-        <div className="flex md:w-1/2 justify-between space-x-6 items-center">
+        <div className="flex md:w-1/2 justify-between space-x-3 items-center">
           <img
             src={Icon}
             alt="Pot Icon"
-            className="pl-3 absolute left-0 lg:relative"
+            className="absolute left-0 lg:relative"
           />
           <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-li focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
             Sign Up
