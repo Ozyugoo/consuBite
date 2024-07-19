@@ -5,9 +5,14 @@ export default {
     colors: {
       "custom-black": "#1B1B1B",
       "custom-red": "#F45156",
-
     },
-    extend: {},
+  
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
+
   },
   plugins: [],
 };
