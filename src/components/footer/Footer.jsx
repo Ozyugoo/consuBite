@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-black w-full h-auto px-24 py-20 text-white flex flex-row flex-wrap place-content-between items-start font-poppins max-md:flex-col max-md:gap-8 max-md:px-6 max-md:py-12">
+      <footer className="bg-custom-black w-full h-auto px-24 py-20 text-custom-light flex flex-row flex-wrap place-content-between items-start font-poppins max-md:flex-col max-md:gap-8 max-md:px-6 max-md:py-12">
         {/* Consubite logo, tagline and social media links */}
         <div className="w-72 flex flex-col gap-y-8 max-md:w-fit">
           <div className="w-fit flex flex-col gap-y-4">
