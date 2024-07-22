@@ -1,13 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './component/header/Header'
 
-import WhatWeServe from "./whatServe/whatWeServe";
-
-
-
- function App() {
+function App() {
   return (
-		<div>
-      <WhatWeServe/>
-		</div>
-  );
+    <Router>
+      <Header/>
+    <WhatWeServe/>
+     <Footer />
+    </Router>
+  )
 }
+
 export default App
