@@ -1,5 +1,5 @@
 
-import WhatWeServe from "./whatServe/whatWeServe";
+import WhatWeServe from "./components/whatServe/whatWeServe";
 
 
 
