@@ -4,10 +4,8 @@ import WhatWeServe from "./components/whatServe/whatWeServe";
 import Hero from "./components/Hero";
 import Footer from "./components/footer/Footer";
 
-
 function App() {
   return (
-
     <Router>
       <Header />
       <Hero />

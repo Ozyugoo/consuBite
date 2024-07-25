@@ -18,9 +18,9 @@ function Footer() {
           <div className="flex flex-col gap-4">
             <p className="text-base font-semibold">Follow Us</p>
             <div className="flex flex-row gap-4">
-              <img src="/pictures/instagram icon.svg" alt="instagram icon" />
-              <img src="/pictures/facebook icon.svg" alt="facebook icon" />
-              <img src="/pictures/X icon.svg" alt="X icon" />
+              <img src="/icons/instagram icon.svg" alt="instagram icon" />
+              <img src="/icons/facebook icon.svg" alt="facebook icon" />
+              <img src="/icons/X icon.svg" alt="X icon" />
             </div>
           </div>
         </div>
@@ -57,17 +57,17 @@ function Footer() {
             <div className="flex flex-col gap-3 text-sm font-normal">
               {/* Email Address */}
               <div className="flex flex-row gap-3 items-center">
-                <img src="/pictures/email icon.svg" alt="email icon" />
+                <img src="/icons/email icon.svg" alt="email icon" />
                 <p className="text-sm font-normal">admin@consubite.io</p>
               </div>
               {/* Phone number */}
               <div className="flex flex-row gap-3 items-center">
-                <img src="/pictures/call icon.svg" alt="call icon" />
+                <img src="/icons/call icon.svg" alt="call icon" />
                 <p className="text-sm font-normal">+234 8012345678</p>
               </div>
               {/* Address */}
               <div className="flex flex-row gap-3 items-center">
-                <img src="/pictures/address icon.svg" alt="location icon" />
+                <img src="/icons/address icon.svg" alt="location icon" />
                 <p className="text-sm font-normal">
                   10 Chow road, Maryland, Lagos
                 </p>
