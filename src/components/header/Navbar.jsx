@@ -20,7 +20,7 @@ function Navbar() {
       <nav
         className={`flex items-center justify-between cursor-pointer w-full md:text-sm `}
       >
-        <div className="block absolute left-0 md:hidden">
+        <div className="block absolute left-4 md:hidden">
           <div onClick={toggleMenu}>
             <svg
               className=""
@@ -84,7 +84,7 @@ function Navbar() {
           <img
             src={Icon}
             alt="Pot Icon"
-            className="absolute right-0 md:left-0 lg:relative"
+            className="absolute right-3 md:left-3 lg:relative"
           />
           <div className="flex justify-between md:space-x-6">
             <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
