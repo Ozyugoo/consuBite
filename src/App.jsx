@@ -1,5 +1,6 @@
 
-import WhatWeServe from "./components/whatServe/whatWeServe";
+import WhatCustomersSay from "./components/whatcustomerSay/index.jsx";
+import {WhatWeServe} from "../src/components/whatServe/whatWeServe";
 
 
 
@@ -7,6 +8,7 @@ import WhatWeServe from "./components/whatServe/whatWeServe";
   return (
 		<div>
       <WhatWeServe/>
+      <WhatCustomersSay/>
 		</div>
   );
 }
