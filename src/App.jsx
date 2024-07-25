@@ -1,4 +1,5 @@
 
+import WhatCustomersSay from "./components/whatcustomerSay";
 import WhatWeServe from "./whatServe/whatWeServe";
 
 
@@ -7,6 +8,7 @@ import WhatWeServe from "./whatServe/whatWeServe";
   return (
 		<div>
       <WhatWeServe/>
+      <WhatCustomersSay/>
 		</div>
   );
 }
