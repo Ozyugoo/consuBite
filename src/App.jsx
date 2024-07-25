@@ -3,13 +3,16 @@ import Header from "./components/header/Header";
 import WhatWeServe from "./components/whatServe/whatWeServe";
 import Hero from "./components/Hero";
 import Footer from "./components/footer/Footer";
+import Ourservices from "./components/Ourservices";
 
 function App() {
   return (
+
     <Router>
       <Header />
       <Hero />
       <WhatWeServe />
+      <Ourservices />
       <Footer />
     </Router>
   );
