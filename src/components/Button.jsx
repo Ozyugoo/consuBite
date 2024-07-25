@@ -2,11 +2,7 @@
 
 function Button({ children, className }) {
   return (
-    <button
-      className={`font-bold rounded-2xl ${className}`}
-    >
-      {children}
-    </button>
+    <button className={`font-bold rounded-xl ${className}`}>{children}</button>
   );
 }
 

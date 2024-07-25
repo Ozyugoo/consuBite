@@ -20,7 +20,7 @@ function Navbar() {
       <nav
         className={`flex items-center justify-between cursor-pointer w-full md:text-sm `}
       >
-        <div className="block md:hidden">
+        <div className="block absolute left-0 md:hidden">
           <div onClick={toggleMenu}>
             <svg
               className=""
@@ -34,14 +34,11 @@ function Navbar() {
           </div>
         </div>
         <ul
-          className={`md:flex md:w-4/6 md:px-6 lg:space-x-5 md:space-x-5 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer sm:bg-custom-black md:text-custom-black md:bg-custom-light p-10 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
+          className={`md:flex md:w-4/6 md:px-4 lg:space-x-6 md:space-x-4 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer bg-custom-black md:text-custom-black md:bg-custom-light py-10 px-14 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 h-screen md:h-[6rem] lg:h-20  w-1/2 ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <p
-            onClick={closeMenu}
-            className="md:hidden hover:text-red-500 focus:text-red-500 active:text-red-500"
-          >
+          <p onClick={closeMenu} className="md:hidden">
             &#10006;
           </p>
           <li className="hover:text-custom-red focus:text-custom-red active:text-custom-red focus:font-bold m-6">
@@ -78,23 +75,25 @@ function Navbar() {
             </Button>
           </li>
           <li className="lg:hidden m-6">
-            <Button className="bg-white border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
+            <Button className="bg-white border border-custom-red bg-custom-red text-custom-light hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
               Login
             </Button>
           </li>
         </ul>
-        <div className="flex md:w-1/2 justify-between space-x-3 items-center">
+        <div className="flex md:w-1/2 justify-between items-center">
           <img
             src={Icon}
             alt="Pot Icon"
-            className="absolute left-0 lg:relative"
+            className="absolute right-0 md:left-0 lg:relative"
           />
-          <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
-            Sign Up
-          </Button>
-          <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
-            Login
-          </Button>
+          <div className="flex justify-between md:space-x-6">
+            <Button className="hidden lg:flex border border-custom-red hover:bg-custom-red text-custom-red hover:text-custom-light focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
+              Sign Up
+            </Button>
+            <Button className="hidden lg:flex border border-custom-red bg-custom-red text-custom-light hover:text-custom-light focus:text-custom-light active:bg-custom-red active:text-custom-light py-2 px-5">
+              Login
+            </Button>
+          </div>
         </div>
       </nav>
 
