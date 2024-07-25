@@ -4,6 +4,7 @@ import Button from "../Button";
 import GoogleIcon from "../../assets/icons8-google.svg";
 import SignUpWithEmailPassword from "./SignUpWithEmailPassword";
 import SignInWithGoogle from "./SignInWithGoogle.jsx";
+import Input from "../InputFields/Input.jsx";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ function Signup() {
 
   return (
     <main>
-      <section>
+      <section className="bg-custom-light absolute">
         <div>
           <div>
             <h1>Hi There!</h1>
@@ -33,14 +34,21 @@ function Signup() {
                 </Button>
               </div>
               <div>
-                <label htmlFor="email-address">Email address</label>
-                <input
-                  type="email"
-                  id="email-address"
-                  value={email}
+                <Input
+                  label="Name or Username"
+                  placeholder="Enter Name or Username"
+                  type="text"
+                  value=""
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="Email address"
+                />
+              </div>
+              <div>
+                <Input
+                  label="Email"
+                  placeholder="Email Address"
+                  type="email"
+                  // value={password}
                 />
               </div>
               <div>
