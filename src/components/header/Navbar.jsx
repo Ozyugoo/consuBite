@@ -2,7 +2,7 @@ import Icon from "../../assets/headerIcon.svg";
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
-import Button from "../Button";
+import Button from "../buttons/Button";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

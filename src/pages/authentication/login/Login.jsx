@@ -1,20 +1,18 @@
 import Input from "../../../components/InputFields/Input";
-import Button from "../../../components/Button";
+import Button from "../../../components/buttons/Button";
+import GoogleButton from "../../../components/buttons/GoogleButton";
 
 function Login() {
   return (
     <div className="bg-[#000] bg-opacity-25 w-screen h-screen flex place-items-center z-10">
-      <div className="bg-[#fff] w-[40%] h-fit mx-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins">
+      <div className="bg-custom-white w-[40%] h-fit mx-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins">
         <div className="flex flex-row w-full place-content-end">
           <img src="/icons/close modal icon.svg" alt="close modal icon" />
         </div>
         <div className="text-center text-[24px] text-custom-black font-semibold">
           Welcome Back!
         </div>
-        <Button className="bg-custom-light border border-custom-black-8  text-custom-black hover:bg-[#f5f5f5] focus:bg-[#d9d9d9] py-[12px] px-6 font-normal text-[14px] rounded-[24px] flex flex-row gap-[10px] place-items-center justify-center">
-          <img src="/icons/google icon.svg" alt="google icon" />
-          Login with Google
-        </Button>
+        <GoogleButton>Login with Google</GoogleButton>
         <div className="flex flex-col gap-[24px] w-full">
           <Input
             label="Email"
