@@ -34,7 +34,7 @@ function Navbar() {
           </div>
         </div>
         <ul
-          className={`md:flex md:w-4/6 md:px-6 lg:space-x-5 md:space-x-5 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer sm:bg-custom-black md:text-custom-black md:bg-custom-light p-10 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
+          className={`bg-custom-black md:flex md:w-4/6 md:px-6 lg:space-x-5 md:space-x-5 xl:text-base justify-center text-custom-light font-semibold md:p-0 cursor-pointer sm:bg-custom-black md:text-custom-black md:bg-custom-white p-10 absolute lg:relative right-0 items-center md:relatve sm:z-50 top-0 sm:h-screen md:h-[6rem] lg:h-20  w-1/2 ${
             isOpen ? "block" : "hidden"
           }`}
         >
