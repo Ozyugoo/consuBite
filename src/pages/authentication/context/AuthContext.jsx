@@ -13,6 +13,7 @@ const userAuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
   const [user, setUser] = useState({});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   function signUp(email, password) {
     createUserWithEmailAndPassword(auth, email, password);
@@ -32,6 +33,7 @@ export function AuthContextProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       console.log("Auth", currentuser);
       setUser(currentuser);
+      setIsLoggedIn(!!currentuser);
     });
 
     return () => {
@@ -47,6 +49,8 @@ export function AuthContextProvider({ children }) {
         signUp,
         logOut,
         googleSignIn,
+        isLoggedIn,
+        setIsLoggedIn,
       }}
     >
       {children}

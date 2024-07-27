@@ -9,8 +9,30 @@ function Login() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = false;
-  const { logIn, googleSignIn } = useContext(userAuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const { logIn, googleSignIn, isLoggedIn, setIsLoggedIn } =
+    useContext(userAuthContext);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await logIn(email, password);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.log("Error during login:", error.message);
+      setError("Your username or password is incorrect");
+    }
+  };
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <div className="bg-[#000] bg-opacity-25 w-screen h-screen flex place-items-center z-10">
@@ -21,22 +43,37 @@ function Login() {
         <div className="text-center text-2xl text-custom-black font-semibold">
           Welcome Back!
         </div>
-        <GoogleButton>Login with Google</GoogleButton>
+        <GoogleButton onClick={handleGoogleSignIn}>
+          Login with Google
+        </GoogleButton>
         <div className="flex flex-col gap-[24px] w-full">
           <Input
             label="Email"
             placeholder="Email Address"
             type="email"
-            // value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <Input
-            label="Password"
-            placeholder="Password"
-            type="password"
-            // value={password}
-          />
+          <div className="relative">
+            <Input
+              label="Password"
+              placeholder="Password"
+              type={showPassword ? "text" : "password"}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <img
+              src={showPassword ? "/icons/eye-slash.svg" : "/icons/eye.svg"}
+              alt={showPassword ? "hide password icon" : "show password icon"}
+              className="absolute top-1/2 bottom-1/2 right-4 cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+            />
+          </div>
+          <div className="text-xs text-custom-redHover font-normal font-poppins">
+            {error && error}
+          </div>
         </div>
-        <Button variant="primary">Login</Button>
+        <Button variant="primary" onClick={handleSubmit}>
+          Login
+        </Button>
 
         <div className="w-full p-[10px] text-custom-red text-xs font-normal text-center">
           Forgot Password?

@@ -5,6 +5,8 @@ function Input({
   type = "text",
   value,
   onChange,
+  onFocus,
+  onBlur,
   className,
   placeholder,
   width = "w-full",
@@ -18,6 +20,8 @@ function Input({
           type={type}
           value={value}
           onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
           placeholder={placeholder}
         />
       </div>
