@@ -1,4 +1,4 @@
-
+import Button from "../Button";
 
 
 function Hero() {
@@ -16,7 +16,9 @@ function Hero() {
           est mattis. Vestibulum sit habitant non vitae.
         </p>
       </div>
-      
+      <Button className="font-[Poppins] font-[600] text-[14px] leading-[21px] align-[center] bg-custom-red h-[45px] w-[200px] rounded-[24px] gap-[10px] border border-custom-red hover:bg-custom-red text-custom-light hover:text-custom-black focus:bg-custom-red focus:text-custom-light active:bg-custom-red active:text-custom-light py-3 px-6">
+              Explore Menu
+            </Button>
       
     </div>
   );
