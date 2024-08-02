@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import userAuthContext from "../context/AuthContext";
 import Input from "../../../components/InputFields/Input";
 import Button from "../../../components/buttons/Button";
@@ -15,15 +15,22 @@ function Signup() {
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  const { user, signUp, googleSignIn, isLoggedIn, setIsLoggedIn } =
-    useContext(userAuthContext);
+  const {
+    signUp,
+    googleSignIn,
+    setIsLoggedIn,
+    closeSignUpModal,
+    isSignUpOpen,
+  } = useContext(userAuthContext);
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setIsLoggedIn(true);
-    }
-  }, []);
+  if (!isSignUpOpen) return null;
+
+  // useEffect(() => {
+  //   const storedUser = localStorage.getItem("user");
+  //   if (storedUser) {
+  //     setIsLoggedIn(true);
+  //   }
+  // }, []);
 
   const handleCreatePassword = (e) => {
     const newPassword = e.target.value;
@@ -85,10 +92,15 @@ function Signup() {
   };
 
   return (
-    <div className="bg-[#000] bg-opacity-25 w-screen h-screen flex place-items-center z-10">
-      <div className="bg-custom-white w-[40%] h-fit mx-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins">
+    <>
+      <div className="fixed inset-0 z-50 overflow-y-auto bg-custom-black opacity-50"></div>
+      <div className="fixed inset-0 z-50 overflow-y-auto bg-custom-white w-[40%] h-90vh mx-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins max-md:w-full max-md:h-full max-md:rounded-none">
         <div className="flex flex-row w-full place-content-end">
-          <img src="/icons/close modal icon.svg" alt="close modal icon" />
+          <img
+            src="/icons/close modal icon.svg"
+            alt="close modal icon"
+            onClick={closeSignUpModal}
+          />
         </div>
         <div className="text-center text-2xl text-custom-black font-semibold">
           Hi There!
@@ -173,7 +185,7 @@ function Signup() {
           <div className="text-xs font-semibold text-custom-red">LOGIN</div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

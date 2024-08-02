@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import userAuthContext from "../context/AuthContext";
 
 import Input from "../../../components/InputFields/Input";
@@ -10,8 +10,10 @@ function Login() {
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const { logIn, googleSignIn, isLoggedIn, setIsLoggedIn } =
+  const { logIn, googleSignIn, setIsLoggedIn, isLoginOpen, closeLoginModal } =
     useContext(userAuthContext);
+
+  if (!isLoginOpen) return null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,16 +31,22 @@ function Login() {
     try {
       await googleSignIn();
       setIsLoggedIn(true);
+      alert("Login successful!");
     } catch (error) {
       console.log(error.message);
     }
   };
 
   return (
-    <div className="bg-[#000] bg-opacity-25 w-screen h-screen flex place-items-center z-10">
-      <div className="bg-custom-white w-[40%] h-fit mx-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins">
+    <>
+      <div className="fixed inset-0 z-100 overflow-y-auto bg-custom-black opacity-50"></div>
+      <div className="fixed inset-0 overflow-y-auto bg-custom-white w-[40%] h-fit m-auto px-[48px] py-[32px] rounded-[24px] flex flex-col gap-[24px] font-poppins max-md:w-full max-md:h-full max-md:rounded-none">
         <div className="flex flex-row w-full place-content-end">
-          <img src="/icons/close modal icon.svg" alt="close modal icon" />
+          <img
+            src="/icons/close modal icon.svg"
+            alt="close modal icon"
+            onClick={closeLoginModal}
+          />
         </div>
         <div className="text-center text-2xl text-custom-black font-semibold">
           Welcome Back!
@@ -85,7 +93,7 @@ function Login() {
           <div className="text-xs font-semibold text-custom-red">SIGN UP</div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
