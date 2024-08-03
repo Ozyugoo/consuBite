@@ -7,7 +7,8 @@ import userAuthContext from "../../pages/authentication/context/AuthContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { openSignUpModal, openLoginModal } = useContext(userAuthContext);
+  const { openSignUpModal, openLoginModal, isLoggedIn, setIsLoggedIn } =
+    useContext(userAuthContext);
 
   function toggleMenu() {
     setIsOpen(!isOpen);
@@ -74,37 +75,64 @@ function Navbar() {
               Contact
             </Scroll>
           </li>
-          <li className="lg:hidden m-6">
-            <Button
-              variant="secondary"
-              onClick={openSignUpModal}
-              className="px-8"
-            >
-              Sign Up
-            </Button>
-          </li>
-          <li className="lg:hidden m-6">
-            <Button variant="primary" className="px-8" onClick={openLoginModal}>
-              Login
-            </Button>
-          </li>
+
+          {isLoggedIn ? (
+            <li className="lg:hidden m-6">
+              <Button variant="primary" className="px-8">
+                Logout
+              </Button>
+            </li>
+          ) : (
+            <>
+              <li className="lg:hidden m-6">
+                <Button
+                  variant="secondary"
+                  onClick={openSignUpModal}
+                  className="px-8"
+                >
+                  Sign Up
+                </Button>
+              </li>
+              <li className="lg:hidden m-6">
+                <Button
+                  variant="primary"
+                  className="px-8"
+                  onClick={openLoginModal}
+                >
+                  Login
+                </Button>
+              </li>
+            </>
+          )}
         </ul>
         <div className="flex md:w-1/2 gap-4 space-x-3 items-center justify-end">
           <img src={Icon} alt="Pot Icon" className="relative" />
-          <Button
-            variant="secondary"
-            onClick={openSignUpModal}
-            className="hidden lg:flex px-8"
-          >
-            Sign Up
-          </Button>
-          <Button
-            variant="primary"
-            className="hidden lg:flex px-8"
-            onClick={openLoginModal}
-          >
-            Login
-          </Button>
+          {isLoggedIn ? (
+            <Button
+              variant="primary"
+              className="hidden lg:flex px-8"
+              onClick={openLoginModal}
+            >
+              Logout
+            </Button>
+          ) : (
+            <>
+              <Button
+                variant="secondary"
+                onClick={openSignUpModal}
+                className="hidden lg:flex px-8"
+              >
+                Sign Up
+              </Button>
+              <Button
+                variant="primary"
+                className="hidden lg:flex px-8"
+                onClick={openLoginModal}
+              >
+                Login
+              </Button>
+            </>
+          )}
         </div>
       </nav>
 
