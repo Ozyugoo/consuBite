@@ -1,6 +1,6 @@
-import Header from "../../components/header/Header";
 import Hero from "../../components/Hero";
 import WhatWeServe from "../../components/whatServe/whatWeServe";
+import Ourservices from "../../components/Ourservices";
 import Footer from "../../components/footer/Footer";
 
 function Home() {
@@ -9,6 +9,7 @@ function Home() {
       {/* <Header /> */}
       <Hero />
       <WhatWeServe />
+      <Ourservices />
       <Footer />
     </>
   );
