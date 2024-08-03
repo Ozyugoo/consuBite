@@ -16,6 +16,7 @@ export function AuthContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
 
   // Stop body from scrolling when sign up modal has been opened
   useEffect(() => {
@@ -43,6 +44,13 @@ export function AuthContextProvider({ children }) {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isLoginOpen]);
+
+  const showAlert = (message) => {
+    setAlertMessage(message);
+    setTimeout(() => {
+      setAlertMessage("");
+    }, 20000); // Clear alert message after 5 seconds
+  };
 
   const openSignUpModal = () => setIsSignUpOpen(true);
   const closeSignUpModal = () => setIsSignUpOpen(false);
@@ -92,6 +100,9 @@ export function AuthContextProvider({ children }) {
         isLoginOpen,
         openLoginModal,
         closeLoginModal,
+        alertMessage,
+        setAlertMessage,
+        showAlert,
       }}
     >
       {children}
