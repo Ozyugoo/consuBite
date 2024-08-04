@@ -4,10 +4,16 @@ export default {
   theme: {
     colors: {
       "custom-black": "#1B1B1B",
-      "custom-black-8": "rgba(0, 0, 0, 0.08)",
+      "custom-blackBorder": "rgba(0, 0, 0, 0.08)",
       "custom-red": "#F45156",
       "custom-light": "#f9f9f9",
-      "custom-grey": "#7c7c7c",
+      "custom-greyDark": "#7c7c7c",
+      "custom-white": "#ffffff",
+      "custom-redHover": "#FF2F30",
+      "custom-redFocus": "#F16F73",
+      "secondary-hover": "#FFCDD0",
+      "secondary-focus": "#FFEEEF",
+      "custom-greyLight": "#f5f5f5",
     },
 
     extend: {
