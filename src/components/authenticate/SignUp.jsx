@@ -12,16 +12,16 @@ function Signup() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await SignUpWithEmailPassword(email, password);
+    await (<SignUpWithEmailPassword />)(email, password);
   };
 
   const handleGoogleSignIn = async () => {
-    await SignInWithGoogle();
+    await (<SignInWithGoogle />)();
   };
 
   return (
     <main>
-      <section className="bg-custom-light absolute">
+      <section className="bg-custom-red z-50 flex items-center justify-center mb-52">
         <div>
           <div>
             <h1>Hi There!</h1>
@@ -48,12 +48,12 @@ function Signup() {
                   label="Email"
                   placeholder="Email Address"
                   type="email"
-                  // value={password}
+                  // value={email}
                 />
               </div>
               <div>
                 <label htmlFor="password">Password</label>
-                <input
+                <Input
                   type="password"
                   id="password"
                   value={password}
