@@ -17,6 +17,3 @@ function Services({ heading }) {
   }
   
   export default Services;
-
-
-  
