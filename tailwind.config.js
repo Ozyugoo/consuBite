@@ -6,6 +6,8 @@ export default {
       "custom-black": "#1B1B1B",
       "custom-red": "#F45156",
       "custom-background-pink":"#FFEEEF",
+      "custom-background-white":"#FFFFFF",
+      "custom-black-text": "#777777",
 
     },
     extend: {},
