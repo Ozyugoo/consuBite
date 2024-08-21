@@ -8,6 +8,7 @@ export default {
       "custom-background-pink":"#FFEEEF",
       "custom-background-white":"#FFFFFF",
       "custom-black-text": "#777777",
+      "custom-yellow": "#FCD53F",
 
     },
     extend: {},
