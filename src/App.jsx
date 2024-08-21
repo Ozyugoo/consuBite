@@ -1,22 +1,25 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthContextProvider } from "./pages/authentication/context/AuthContext";
+import Home from "./pages/home/Home";
+import Login from "./pages/authentication/login/Login";
+import Signup from "./pages/authentication/signup/Signup";
 import Header from "./components/header/Header";
-import WhatWeServe from "./components/whatServe/whatWeServe";
-import Hero from "./components/Hero";
-import Footer from "./components/footer/Footer";
-import Signup from "./components/authenticate/SignUp";
-import Ourservices from "./components/Ourservices";
 
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Hero />
+      <AuthContextProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Router>
         <Signup />
-        <WhatWeServe />
-        <Ourservices />
-        <Footer />
-      </Router>
+        <Login />
+      </AuthContextProvider>
     </>
   );
 }
