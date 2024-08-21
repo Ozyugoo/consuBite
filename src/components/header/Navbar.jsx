@@ -42,7 +42,7 @@ function Navbar() {
           <div className="md:flex md:justify-center md:items-center md:h-5 py-5">
             <nav className="cursor-pointer flex justify-center items-center">
               <ul
-                className={`max-[780px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center max-[780px]h-screen md:relative lg:mr-4 text-custom-light font-semibold md:text-custom-black p-10 ${
+                className={`max-[1023px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center h-screen lg:relative lg:mr-4 text-custom-light font-semibold lg:text-custom-black p-10 ${
                   isOpen ? "block" : "hidden"
                 }`}
               >
