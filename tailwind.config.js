@@ -9,9 +9,22 @@ export default {
       "custom-background-white":"#FFFFFF",
       "custom-black-text": "#777777",
       "custom-yellow": "#FCD53F",
-
+      "custom-blackBorder": "rgba(0, 0, 0, 0.08)",
+      "custom-light": "#f9f9f9",
+      "custom-greyDark": "#7c7c7c",
+      "custom-white": "#ffffff",
+      "custom-redHover": "#FF2F30",
+      "custom-redFocus": "#F16F73",
+      "secondary-hover": "#FFCDD0",
+      "secondary-focus": "#FFEEEF",
+      "custom-greyLight": "#f5f5f5",
     },
-    extend: {},
+
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
