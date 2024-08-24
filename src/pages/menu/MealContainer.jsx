@@ -4,16 +4,19 @@ function MealContainer({ mealObject }) {
   return (
     <>
       <div className="flex flex-col bg-custom-white rounded-2xl">
-        <img src={mealObject.photo} className="rounded-t-2xl" />
+        <img
+          src={mealObject.photo}
+          className="rounded-t-2xl h-[208px] object-cover"
+        />
         <div className="flex flex-col gap-3 p-4">
           <div className="flex flex-col gap-1">
-            <div className="text-sm font-medium">{mealObject.name}</div>
+            <div className="text-sm font-semibold">{mealObject.name}</div>
             <div className="flex flex-row gap-1 items-center">
               <img src="icons/rating.svg" />
               <div className="text-xs font-medium">{mealObject.rating}</div>
             </div>
           </div>
-          <div className="text-xs text-custom-greyDark">
+          <div className="text-xs h-9 text-custom-greyDark">
             {mealObject.description}
           </div>
           <div className="flex flex-row place-content-between items-center">
