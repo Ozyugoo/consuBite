@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import WhatWeServe from "./components/whatServe/whatWeServe";
 import Hero from "./components/heroes/Hero";
 import Footer from "./components/footer/Footer";
+import Ourservices from "./components/ourServices/Ourservices";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Hero />
       <WhatWeServe />
+      <Ourservices />
       <Footer />
     </Router>
   );
