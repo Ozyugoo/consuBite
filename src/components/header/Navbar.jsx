@@ -7,7 +7,7 @@ import userAuthContext from "../../pages/authentication/context/AuthContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { openSignUpModal, openLoginModal, isLoggedIn, setIsLoggedIn } =
+  const { openSignUpModal, openLoginModal, isLoggedIn } =
     useContext(userAuthContext);
 
   function toggleMenu() {
@@ -108,11 +108,7 @@ function Navbar() {
         <div className="flex md:w-1/2 gap-4 space-x-3 items-center justify-end">
           <img src={Icon} alt="Pot Icon" className="relative" />
           {isLoggedIn ? (
-            <Button
-              variant="primary"
-              className="hidden lg:flex px-8"
-              onClick={openLoginModal}
-            >
+            <Button variant="primary" className="hidden lg:flex px-8">
               Logout
             </Button>
           ) : (
