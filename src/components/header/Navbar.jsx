@@ -120,11 +120,7 @@ function Navbar() {
                   <img src={Icon} alt="Pot Icon" className="ml-48 md:ml-0" />
                 </div>
                 {isLoggedIn ? (
-                  <Button
-                    variant="primary"
-                    className="hidden md:flex px-8"
-                    onClick={openLoginModal}
-                  >
+                  <Button variant="primary" className="hidden md:flex px-8">
                     Logout
                   </Button>
                 ) : (
