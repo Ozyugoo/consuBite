@@ -55,7 +55,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <Link to="/Menu" onClick={closeMenu}>
+                  <Link to="/menu" onClick={closeMenu}>
                     Menu
                   </Link>
                 </li>
