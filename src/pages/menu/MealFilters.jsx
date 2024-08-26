@@ -11,6 +11,7 @@ const categories = [
   "Snacks",
   "Drinks",
   "Side dishes",
+  "Others",
 ];
 
 function MealFilters({ onCategoryChange }) {
