@@ -9,19 +9,19 @@ import Menu from "./pages/menu/Menu";
 function App() {
   return (
     <>
-      <AuthContextProvider>
         <Router>
+      <AuthContextProvider>      
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/menu" element={<Menu />} />
-          </Routes>
-        </Router>
+          </Routes>        
         <Signup />
         <Login />
       </AuthContextProvider>
+          </Router>
     </>
   );
 }
