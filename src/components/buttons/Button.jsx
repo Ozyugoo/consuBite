@@ -5,15 +5,16 @@ function Button({ children, variant, className, onClick }) {
     "px-[24px] py-[12px] rounded-[24px] text-sm font-semibold";
 
   const variants = {
-    primary: "bg-custom-red text-[#fff] hover:bg-[#FF2F30] focus:bg-[#F16F73]",
+    primary:
+      "bg-custom-red text-custom-white hover:bg-custom-redHover focus:bg-custom-redFocus",
     secondary:
-      "border border-custom-red text-custom-red hover:bg-[#FFCDD0] focus:bg-[#FFEEEF]",
+      "border border-custom-red text-custom-red hover:bg-secondary-hover focus:bg-secondary-focus",
   };
 
   const buttonStyle = `${generalStyles} ${variants[variant]} ${className}`;
 
   return (
-    <button className={buttonStyle} onClick={onclick}>
+    <button className={buttonStyle} onClick={onClick}>
       {children}
     </button>
   );
