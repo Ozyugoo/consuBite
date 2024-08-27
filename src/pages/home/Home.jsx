@@ -10,8 +10,8 @@ function Home() {
       <Hero />
       <WhatWeServe />
       <Ourservices />
-      <Footer />
       <WhatCustomersSay/>
+      <Footer />
     </>
   );
 }

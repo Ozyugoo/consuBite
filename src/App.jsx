@@ -17,8 +17,6 @@ function App() {
             <Route path="/signup" element={<Signup />} />
           </Routes>
         </Router>
-        {/* <Signup />
-        <Login /> */}
       </AuthContextProvider>
     </>
   );
