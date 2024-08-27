@@ -1,5 +1,5 @@
 
-import Services from "./services";
+import Services from "../ourServices/services";
 
 function Ourservices() {
   return (
