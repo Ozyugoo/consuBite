@@ -1,6 +1,6 @@
 import Icon from "../../assets/headerIcon.svg";
 import { useState, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
 import Logo from "../../assets/ConsuBiteLogo.svg";
 import Button from "../buttons/Button";
@@ -50,19 +50,27 @@ function Navbar() {
                   &#10006;
                 </p>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <Link to="/" onClick={closeMenu}>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? "text-custom-red font-bold" : ""
+                    }
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <Link to="/Menu" onClick={closeMenu}>
+                  <NavLink
+                    to="/menu"
+                    className={({ isActive }) =>
+                      isActive ? "text-custom-red font-bold" : ""
+                    }
+                  >
                     Menu
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <Link to="/about" onClick={closeMenu}>
-                    About
-                  </Link>
+                  <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6 ">
                   <Scroll
@@ -112,11 +120,7 @@ function Navbar() {
                   <img src={Icon} alt="Pot Icon" className="ml-48 md:ml-0" />
                 </div>
                 {isLoggedIn ? (
-                  <Button
-                    variant="primary"
-                    className="hidden md:flex px-8"
-                    onClick={openLoginModal}
-                  >
+                  <Button variant="primary" className="hidden md:flex px-8">
                     Logout
                   </Button>
                 ) : (
