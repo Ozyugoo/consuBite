@@ -4,8 +4,12 @@ export default {
   theme: {
     colors: {
       "custom-black": "#1B1B1B",
-      "custom-blackBorder": "rgba(0, 0, 0, 0.08)",
       "custom-red": "#F45156",
+      "custom-background-pink":"#FFEEEF",
+      "custom-background-white":"#FFFFFF",
+      "custom-black-text": "#777777",
+      "custom-yellow": "#FCD53F",
+      "custom-blackBorder": "rgba(0, 0, 0, 0.08)",
       "custom-light": "#f9f9f9",
       "custom-greyDark": "#7c7c7c",
       "custom-white": "#ffffff",

@@ -4,7 +4,7 @@ import WhatWeServe from "../../components/whatServe/whatWeServe";
 import Ourservices from "../../components/ourServices/Ourservices";
 import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
-
+import WhatCustomersSay from "../../WhatCustomersSay";
 function Home() {
   return (
     <>
@@ -12,6 +12,7 @@ function Home() {
       <Hero />
       <WhatWeServe />
       <Ourservices />
+      <WhatCustomersSay/>
       <Footer />
     </>
   );
