@@ -5,6 +5,7 @@ import Login from "./pages/authentication/login/Login";
 import Signup from "./pages/authentication/signup/Signup";
 import Header from "./components/header/Header";
 import Menu from "./pages/menu/Menu";
+import Details from "./pages/details/Details";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/details" element={<Details />} />
           </Routes>
         </Router>
       </AuthContextProvider>
