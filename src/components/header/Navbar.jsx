@@ -51,6 +51,7 @@ function Navbar() {
                 </p>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
                   <NavLink
+                    onClick={closeMenu}
                     to="/"
                     className={({ isActive }) =>
                       isActive ? "text-custom-red font-bold" : ""
@@ -61,6 +62,7 @@ function Navbar() {
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
                   <NavLink
+                    onClick={closeMenu}
                     to="/menu"
                     className={({ isActive }) =>
                       isActive ? "text-custom-red font-bold" : ""
@@ -70,7 +72,9 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <NavLink to="/about">About</NavLink>
+                  <NavLink onClick={closeMenu} to="/about">
+                    About
+                  </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6 ">
                   <Scroll
@@ -87,14 +91,14 @@ function Navbar() {
                 </li>
 
                 {isLoggedIn ? (
-                  <li className="lg:hidden m-6">
+                  <li className="lg:hidden m-6" onClick={closeMenu}>
                     <Button variant="primary" className="px-8">
                       Logout
                     </Button>
                   </li>
                 ) : (
                   <>
-                    <li className="md:hidden m-6">
+                    <li className="md:hidden m-6" onClick={closeMenu}>
                       <Button
                         variant="secondary"
                         onClick={openSignUpModal}
@@ -103,7 +107,7 @@ function Navbar() {
                         Sign Up
                       </Button>
                     </li>
-                    <li className="md:hidden m-6 ">
+                    <li className="md:hidden m-6 " onClick={closeMenu}>
                       <Button
                         variant="primary"
                         className="px-8"
