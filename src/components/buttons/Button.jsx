@@ -9,6 +9,8 @@ function Button({ children, variant, className, onClick }) {
       "bg-custom-red text-custom-white hover:bg-custom-redHover focus:bg-custom-redFocus",
     secondary:
       "border border-custom-red text-custom-red hover:bg-secondary-hover focus:bg-secondary-focus",
+    tertiary:
+      "border border-custom-greyLight text-custom-black hover:bg-secondary-hover focus:bg-secondary-focus",
   };
 
   const buttonStyle = `${generalStyles} ${variants[variant]} ${className}`;
