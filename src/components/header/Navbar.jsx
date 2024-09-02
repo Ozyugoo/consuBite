@@ -20,7 +20,7 @@ function Navbar() {
   }
   return (
     <>
-      <div className="flex justify-between items-center space-x-6 px-16 md:px-12 2xl:px-24 md:py-6">
+      <div className="flex justify-between items-center space-x-16 px-16 md:px-12 xl:px-24 md:py-6">
         <div className="w-full justify-center items-center pl-12 lg:pl-0">
           <img src={Logo} alt="ConsuBite Logo" />
         </div>
