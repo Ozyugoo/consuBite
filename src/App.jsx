@@ -6,6 +6,7 @@ import Signup from "./pages/authentication/signup/Signup";
 import Header from "./components/header/Header";
 import Menu from "./pages/menu/Menu";
 import Details from "./pages/details/Details";
+import Checkout from "./pages/details/Checkout";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/details" element={<Details />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </Router>
       </AuthContextProvider>
