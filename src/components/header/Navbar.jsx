@@ -42,7 +42,7 @@ function Navbar() {
           <div className="md:flex md:justify-center md:items-center md:h-5 py-5">
             <nav className="cursor-pointer flex justify-center items-center">
               <ul
-                className={`max-[780px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center max-[780px]h-screen md:relative lg:mr-4 text-custom-light font-semibold md:text-custom-black p-10 ${
+                className={`max-[1024px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center max-[1024px]h-screen lg:relative lg:mr-4 text-custom-light font-semibold lg:text-custom-black p-10 ${
                   isOpen ? "block" : "hidden"
                 }`}
               >
@@ -119,7 +119,7 @@ function Navbar() {
                   </>
                 )}
               </ul>
-              <div className="flex md:w-full md:space-x-4 justify-end items-center md:ml-8 lg:ml-4">
+              <div className="flex md:w-full md:space-x-9 justify-end items-center md:ml-6 lg:ml-4 xl:ml-8">
                 <div className="">
                   <img src={Icon} alt="Pot Icon" className="ml-48 md:ml-0" />
                 </div>
@@ -132,7 +132,7 @@ function Navbar() {
                     <Button
                       variant="secondary"
                       onClick={openSignUpModal}
-                      className="hidden md:flex px-8 md:text-sm md:font-bold"
+                      className="hidden md:flex px-8 md:px-5 md:max-w-36 md:text-sm md:font-bold"
                     >
                       Sign Up
                     </Button>
