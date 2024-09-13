@@ -14,6 +14,7 @@ export default {
       "secondary-hover": "#FFCDD0",
       "secondary-focus": "#FFEEEF",
       "custom-greyLight": "#f5f5f5",
+      "custom-transparent": "rgba(0, 0, 0, 0)",
     },
 
     extend: {
