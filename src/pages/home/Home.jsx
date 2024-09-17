@@ -12,7 +12,7 @@ function Home() {
       <WhatWeServe />
       <Ourservices />
       <WhatCustomersSay />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
