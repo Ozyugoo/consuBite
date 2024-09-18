@@ -16,7 +16,7 @@ function Menu() {
   }
   return (
     <>
-      <div className="bg-custom-light h-full w-screen px-20 py-8 flex flex-col gap-8 items-center lg:px-20 md:px-20 px-6">
+      <div className="bg-custom-light h-full w-screen py-8 flex flex-col gap-8 items-center lg:px-20 md:px-20 px-6">
         <div className="text-[32px] font-bold">Menu</div>
         <SearchBar placeholder={"Search menu..."} />
         <MealFilters onCategoryChange={handleCategoryChange} />
