@@ -1,10 +1,9 @@
-
-import Services from "./services";
+import Services from "../ourServices/services";
 
 function Ourservices() {
   return (
     <>
-      <div className="main-ctr contain-content  min-w-[360px] min-h-[767px] pt-[40px] pl-[24px] pr-[40px] pb-[34px] gap-[1px] flex flex-col  lg:justify-around lg:items-start lg:flex-row md:flex-col md:justify-around md:items-center md:mt-[1px] mt-0 sm:mt-[50px] md:w-[100%] md:h-[912px] lg:w-[100%] lg:h-[501px]  lg:gap-[120px] ">
+      <div className="main-ctr contain-content  min-w-[360px] min-h-[567px] pt-[50px] pl-[24px] pr-[40px] pb-[34px] gap-[1px] flex flex-col flex-wrap  lg:justify-around lg:items-start lg:flex-row md:flex-col md:justify-around md:items-center lg:mt-0 md:mt-[2%] mt-0  sm:mt-[2%] md:w-[100%] md:h-[20%] lg:w-[100%] lg:h-[13%]  lg:gap-[120px] box-border">
         <div className="cont-ctr min-w-[312px] min-h-[462px] sm:gap-[32px] flex flex-col lg:w-[550px]  lg:h-[420px]  lg:gap-[32px]">
           <div className="header-ctr flex flex-col justify-center items-center lg:justify-start lg:items-start ">
             <h1 className="min-w-[312px] min-h-[30px] font-[Poppins] font-[800] text-[20px] leading-[30px] text-center mb-[8px] lg:max-w-[262px] lg:max-h-[60px] lg:font-[800] lg:text-[40px] lg:leading-[60px] lg:text-left" >Our  <span className="font-poppins font-[800] text-[20px] leading-[30px] text-center text-[#F45156] lg:font-[800] lg:text-[40px] lg:leading-[60px]">Services</span></h1>
@@ -31,5 +30,6 @@ function Ourservices() {
 }
 
 export default Ourservices;
+
 
 

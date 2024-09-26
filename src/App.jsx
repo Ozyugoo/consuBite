@@ -13,14 +13,12 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} exact={true} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/menu" element={<Menu />} />
           </Routes>
         </Router>
-        <Signup />
-        <Login />
       </AuthContextProvider>
     </>
   );
