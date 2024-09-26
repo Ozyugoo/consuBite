@@ -8,7 +8,6 @@ import Button from "../../components/buttons/Button";
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [search, setSearch] = useState("");
-  const [filteredMeals, setFilteredMeals] = useState(meals);
 
   // Filter meals based on search and category
   const filteredMeals = meals.filter(
