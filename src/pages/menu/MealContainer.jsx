@@ -1,6 +1,12 @@
 import Button from "../../components/buttons/Button";
+import { useNavigate } from "react-router-dom";
 
 function MealContainer({ mealObject }) {
+   const navigate = useNavigate();
+
+   function addToOrder() {
+    navigate("/details", { state: { meal: mealObject } });
+   }
   return (
     <>
       <div className="flex flex-col bg-custom-white rounded-2xl">
@@ -22,7 +28,11 @@ function MealContainer({ mealObject }) {
           <div className="flex flex-row place-content-between items-center">
             <div className="text-sm font-bold">NGN {mealObject.price}</div>
 
-            <Button variant="secondary" className="py-2 text-xs">
+            <Button
+              variant="secondary"
+              className="py-2 text-xs"
+              onClick={addToOrder}
+            >
               Add to Order
             </Button>
           </div>

@@ -20,7 +20,7 @@ function Navbar() {
   }
   return (
     <>
-      <div className="flex justify-between items-center space-x-6 px-16 md:px-12 2xl:px-24 md:py-6">
+      <div className="flex justify-between items-center space-x-16 px-16 md:px-12 xl:px-24 md:py-6">
         <div className="w-full justify-center items-center pl-12 lg:pl-0">
           <img src={Logo} alt="ConsuBite Logo" />
         </div>
@@ -42,7 +42,7 @@ function Navbar() {
           <div className="md:flex md:justify-center md:items-center md:h-5 py-5">
             <nav className="cursor-pointer flex justify-center items-center">
               <ul
-                className={`max-[780px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center max-[780px]h-screen md:relative lg:mr-4 text-custom-light font-semibold md:text-custom-black p-10 ${
+                className={`max-[1024px]:bg-custom-black absolute top-0 left-0 w-1/2 lg:w-1/3 lg:flex justify-between items-center max-[1024px]h-screen lg:relative lg:mr-4 text-custom-light font-semibold lg:text-custom-black p-10 ${
                   isOpen ? "block" : "hidden"
                 }`}
               >
@@ -51,6 +51,7 @@ function Navbar() {
                 </p>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
                   <NavLink
+                    onClick={closeMenu}
                     to="/"
                     className={({ isActive }) =>
                       isActive ? "text-custom-red font-bold" : ""
@@ -61,6 +62,7 @@ function Navbar() {
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
                   <NavLink
+                    onClick={closeMenu}
                     to="/menu"
                     className={({ isActive }) =>
                       isActive ? "text-custom-red font-bold" : ""
@@ -70,7 +72,9 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6">
-                  <NavLink to="/about">About</NavLink>
+                  <NavLink onClick={closeMenu} to="/about">
+                    About
+                  </NavLink>
                 </li>
                 <li className="hover:text-custom-redHover focus:text-custom-redFocus active:text-custom-red focus:font-bold m-6 ">
                   <Scroll
@@ -87,14 +91,14 @@ function Navbar() {
                 </li>
 
                 {isLoggedIn ? (
-                  <li className="lg:hidden m-6">
+                  <li className="lg:hidden m-6" onClick={closeMenu}>
                     <Button variant="primary" className="px-8">
                       Logout
                     </Button>
                   </li>
                 ) : (
                   <>
-                    <li className="md:hidden m-6">
+                    <li className="md:hidden m-6" onClick={closeMenu}>
                       <Button
                         variant="secondary"
                         onClick={openSignUpModal}
@@ -103,7 +107,7 @@ function Navbar() {
                         Sign Up
                       </Button>
                     </li>
-                    <li className="md:hidden m-6 ">
+                    <li className="md:hidden m-6 " onClick={closeMenu}>
                       <Button
                         variant="primary"
                         className="px-8"
@@ -115,7 +119,7 @@ function Navbar() {
                   </>
                 )}
               </ul>
-              <div className="flex md:w-full md:space-x-4 justify-end items-center md:ml-8 lg:ml-4">
+              <div className="flex md:w-full md:space-x-9 justify-end items-center md:ml-6 lg:ml-4 xl:ml-8">
                 <div className="">
                   <img src={Icon} alt="Pot Icon" className="ml-48 md:ml-0" />
                 </div>
@@ -128,7 +132,7 @@ function Navbar() {
                     <Button
                       variant="secondary"
                       onClick={openSignUpModal}
-                      className="hidden md:flex px-8 md:text-sm md:font-bold"
+                      className="hidden md:flex px-8 md:px-5 md:max-w-36 md:text-sm md:font-bold"
                     >
                       Sign Up
                     </Button>

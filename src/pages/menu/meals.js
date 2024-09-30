@@ -1,4 +1,4 @@
-const meals = [
+export const meals = [
   {
     id: 1,
     category: "Pasta",
@@ -156,26 +156,7 @@ const meals = [
     description:
       "Delicious Nigerian jollof rice combo with fried plantains and peppered chicken",
     price: 4000,
-    compliments: [
-      {
-        id: 1,
-        mealComplimentName: "Coleslaw",
-        mealComplimentPhoto: "/pictures/Coleslaw 1.jpg",
-        mealComplimentPrice: 1000,
-      },
-      {
-        id: 2,
-        mealComplimentName: "Moi-moi",
-        mealComplimentPhoto: "/pictures/Moimoi 1.jpeg",
-        mealComplimentPrice: 1000,
-      },
-      {
-        id: 3,
-        mealComplimentName: "Plantain",
-        mealComplimentPhoto: "/pictures/Plantain 1.jpg",
-        mealComplimentPrice: 1000,
-      },
-    ],
+    // 
   },
   {
     id: 7,

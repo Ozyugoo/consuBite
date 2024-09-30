@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
-import customerSayImage from "../assets/images/customerSayImage.png";
+import customerSayImage from "../../assets/images/customerSayImage.png";
 // Define the data array before the component function
 const data = [
   {
